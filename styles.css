@@ -1,0 +1,316 @@
+:root {
+  --bg: #eceef1;
+  --bg-deep: #cfd2d8;
+  --ink: #101114;
+  --ink-soft: #4b4f57;
+  --accent: #2e6ff2;
+  --hud-dark: #131418;
+  --hud-line: #2a2d33;
+  --hud-red: #e0392f;
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ---------- HUD chrome ---------- */
+
+.hud-id {
+  position: fixed;
+  top: 14px;
+  left: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  z-index: 20;
+}
+
+.corner-tl {
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  z-index: 20;
+  opacity: 0.55;
+}
+.corner-tl span {
+  display: block;
+  width: 26px;
+  height: 1px;
+  background: var(--ink-soft);
+  margin-bottom: 3px;
+}
+.corner-tl span:first-child { width: 40px; }
+.corner-tl small {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-soft);
+}
+
+.corner-tr {
+  position: fixed;
+  top: 24px;
+  right: 20px;
+  z-index: 20;
+}
+.corner-square {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--ink-soft);
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+
+.ruler {
+  position: fixed;
+  right: 14px;
+  top: 45%;
+  transform: translateY(-50%) rotate(90deg);
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.5;
+  z-index: 5;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 56px 0;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+}
+.logo-mark { width: 30px; height: 30px; }
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.main-nav {
+  display: flex;
+  gap: 44px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.nav-link:hover { color: var(--ink); }
+.nav-link.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.points-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--hud-line);
+  opacity: 0.4;
+}
+.points-value {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--ink);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+  overflow: hidden;
+}
+
+.hero-portrait {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 58%;
+  z-index: 1;
+  pointer-events: none;
+}
+.portrait-svg { width: 100%; height: 100%; display: block; }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  padding-top: 40px;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.headline-dot { color: var(--accent); }
+
+.signature {
+  width: 260px;
+  height: 74px;
+  margin: -6px 0 4px -6px;
+  display: block;
+}
+.signature path {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: draw 1.6s ease forwards 0.4s;
+}
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 10px 0 26px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1.5px solid var(--ink-soft);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.dot:hover { transform: translateY(-1px); }
+.dot.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Bottom HUD bar ---------- */
+
+.hud-bar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 56px;
+  padding: 0 20px 0 0;
+  background: var(--hud-dark);
+  color: #8a8f98;
+}
+
+.hud-left {
+  height: 100%;
+  width: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hud-flag {
+  width: 4px;
+  height: 34px;
+  background: var(--hud-red);
+}
+
+.timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.tick { position: relative; padding-left: 4px; }
+.tick::before {
+  content: attr(data-year);
+}
+.tick::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 1px;
+  height: 6px;
+  background: var(--hud-line);
+}
+
+.hud-meta, .hud-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .site-header { flex-wrap: wrap; padding: 24px 24px 0; gap: 16px; }
+  .main-nav { order: 3; width: 100%; justify-content: flex-start; gap: 24px; }
+  .hero { padding: 0 24px; min-height: 60vh; }
+  .hero-portrait { width: 80%; opacity: 0.5; }
+  .ruler, .corner-tl, .corner-tr { display: none; }
+  .timeline { gap: 20px; overflow-x: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature path { animation: none; stroke-dashoffset: 0; }
+}

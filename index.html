@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAAVK — Zukunft, Effizient.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="hud-id" id="hudId">WW UID:8179257665_202609251412</div>
+
+  <div class="corner corner-tl">
+    <span></span><span></span><span></span>
+    <small>[Hive Wolf]</small>
+  </div>
+
+  <div class="corner corner-tr" aria-hidden="true">
+    <div class="corner-square"></div>
+  </div>
+
+  <div class="ruler" aria-hidden="true">
+    <span>45</span><span>1</span><span>8</span><span>1</span>
+  </div>
+
+  <header class="site-header">
+    <div class="logo">
+      <svg viewBox="0 0 40 40" class="logo-mark" aria-hidden="true">
+        <path d="M20 2 L34 20 L20 38 L6 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M20 10 L28 20 L20 30 L12 20 Z" fill="currentColor"/>
+      </svg>
+      <span class="logo-text">HAAVK</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="#" class="nav-link is-active" data-nav>ÜBER UNS</a>
+      <a href="#" class="nav-link" data-nav>MITARBEITER-FORUM</a>
+      <a href="#" class="nav-link" data-nav>LÖSUNG</a>
+    </nav>
+
+    <div class="points">
+      <span class="points-label">AUFMERKSAMKEITSPUNKTE</span>
+      <span class="points-divider"></span>
+      <span class="points-value" id="pointsValue">0</span>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-portrait" aria-hidden="true">
+      <svg viewBox="0 0 600 800" class="portrait-svg" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#eceef1" stop-opacity="1"/>
+            <stop offset="35%" stop-color="#eceef1" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="70%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#3a4048"/>
+            <stop offset="100%" stop-color="#0f1013"/>
+          </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="600" height="800" fill="url(#glow)"/>
+        <path d="M150 800 C150 560 230 430 300 430 C370 430 450 560 450 800 Z" fill="#1b1d21"/>
+        <ellipse cx="300" cy="290" rx="110" ry="135" fill="#3d4148"/>
+        <path d="M195 250 Q300 110 405 250 Q400 190 300 175 Q200 190 195 250 Z" fill="#101114"/>
+        <rect x="0" y="0" width="600" height="800" fill="url(#fade)"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="headline">
+        ZUKUNFT, EFFIZIENT<span class="headline-dot">.</span>
+      </h1>
+
+      <svg class="signature" viewBox="0 0 420 120" aria-hidden="true">
+        <path id="sigPath" d="M10 70 C 40 20, 70 20, 90 55 C 105 80, 120 40, 140 45
+          C 160 50, 150 90, 175 85 C 200 80, 210 40, 235 45
+          C 260 50, 255 95, 280 90 L 410 60"
+          fill="none" stroke="#2e6ff2" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+
+      <p class="tagline" id="tagline">Perfektioniere die Mittel. Bestimme den Zweck.</p>
+
+      <div class="dots" id="dots">
+        <button class="dot is-active" data-index="0" aria-label="Ansicht 1"></button>
+        <button class="dot" data-index="1" aria-label="Ansicht 2"></button>
+        <button class="dot" data-index="2" aria-label="Ansicht 3"></button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="hud-bar">
+    <div class="hud-left">
+      <span class="hud-flag"></span>
+    </div>
+    <div class="timeline" id="timeline">
+      <span class="tick" data-year="18.93"></span>
+      <span class="tick" data-year="2003"></span>
+      <span class="tick" data-year="2020"></span>
+      <span class="tick" data-year="2027"></span>
+      <span class="tick" data-year="2035"></span>
+    </div>
+    <div class="hud-meta" id="hudMeta">// G.T.I 7 20 9 // DF 199.3 &lt;2035&gt;</div>
+    <div class="hud-tag">&gt; HAWK_OPS</div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
