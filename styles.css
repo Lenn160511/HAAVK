@@ -253,13 +253,14 @@ header {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 80px 24px 40px;
   position: relative;
   gap: 40px;
+  background: var(--bg);
 }
 
 .hero-content {
@@ -355,6 +356,13 @@ header {
   margin-top: 40px;
   position: relative;
   z-index: 15;
+  background: var(--bg-deep);
+  padding: 40px 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: -40px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .principle {
