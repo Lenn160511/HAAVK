@@ -10,102 +10,44 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <div class="hud-id" id="hudId">WW UID:8179257665_202609251412</div>
-
-  <div class="corner corner-tl">
-    <span></span><span></span><span></span>
-    <small>[Hive Wolf]</small>
-  </div>
-
-  <div class="corner corner-tr" aria-hidden="true">
-    <div class="corner-square"></div>
-  </div>
-
-  <div class="ruler" aria-hidden="true">
-    <span>45</span><span>1</span><span>8</span><span>1</span>
-  </div>
+  <div class="corner corner-tl" aria-hidden="true"><span></span><span></span><span></span><small>[Hive Wolf]</small></div>
+  <div class="corner corner-tr" aria-hidden="true"><div class="corner-square"></div></div>
+  <div class="ruler" aria-hidden="true"><span>45</span><span>1</span><span>8</span><span>1</span></div>
 
   <header class="site-header">
-    <div class="logo">
-      <svg viewBox="0 0 40 40" class="logo-mark" aria-hidden="true">
-        <path d="M20 2 L34 20 L20 38 L6 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
-        <path d="M20 10 L28 20 L20 30 L12 20 Z" fill="currentColor"/>
-      </svg>
+    <a class="logo" href="#start" aria-label="HAAVK Startseite">
+      <svg viewBox="0 0 40 40" class="logo-mark" aria-hidden="true"><path d="M20 2 L34 20 L20 38 L6 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 10 L28 20 L20 30 L12 20 Z" fill="currentColor"/></svg>
       <span class="logo-text">HAAVK</span>
-    </div>
-
-    <nav class="main-nav">
-      <a href="#" class="nav-link is-active" data-nav>ÜBER UNS</a>
-      <a href="#" class="nav-link" data-nav>MITARBEITER-FORUM</a>
-      <a href="#" class="nav-link" data-nav>LÖSUNG</a>
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#start" class="nav-link is-active" data-nav="start">ÜBER UNS</a>
+      <a href="#forum" class="nav-link" data-nav="forum">MITARBEITER-FORUM</a>
+      <a href="#ideen" class="nav-link" data-nav="ideen">IDEEN</a>
     </nav>
-
-    <div class="points">
-      <span class="points-label">AUFMERKSAMKEITSPUNKTE</span>
-      <span class="points-divider"></span>
-      <span class="points-value" id="pointsValue">0</span>
-    </div>
+    <div class="points"><span class="points-label">AUFMERKSAMKEITSPUNKTE</span><span class="points-divider"></span><span class="points-value" id="pointsValue">0</span></div>
   </header>
 
-  <main class="hero">
-    <div class="hero-portrait" aria-hidden="true">
-      <svg viewBox="0 0 600 800" class="portrait-svg" preserveAspectRatio="xMidYMax slice">
-        <defs>
-          <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#eceef1" stop-opacity="1"/>
-            <stop offset="35%" stop-color="#eceef1" stop-opacity="0"/>
-          </linearGradient>
-          <radialGradient id="glow" cx="70%" cy="35%" r="60%">
-            <stop offset="0%" stop-color="#3a4048"/>
-            <stop offset="100%" stop-color="#0f1013"/>
-          </radialGradient>
-        </defs>
-        <rect x="0" y="0" width="600" height="800" fill="url(#glow)"/>
-        <path d="M150 800 C150 560 230 430 300 430 C370 430 450 560 450 800 Z" fill="#1b1d21"/>
-        <ellipse cx="300" cy="290" rx="110" ry="135" fill="#3d4148"/>
-        <path d="M195 250 Q300 110 405 250 Q400 190 300 175 Q200 190 195 250 Z" fill="#101114"/>
-        <rect x="0" y="0" width="600" height="800" fill="url(#fade)"/>
-      </svg>
-    </div>
-
-    <div class="hero-content">
-      <h1 class="headline">
-        ZUKUNFT, EFFIZIENT<span class="headline-dot">.</span>
-      </h1>
-
-      <svg class="signature" viewBox="0 0 420 120" aria-hidden="true">
-        <path id="sigPath" d="M10 70 C 40 20, 70 20, 90 55 C 105 80, 120 40, 140 45
-          C 160 50, 150 90, 175 85 C 200 80, 210 40, 235 45
-          C 260 50, 255 95, 280 90 L 410 60"
-          fill="none" stroke="#2e6ff2" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-
-      <p class="tagline" id="tagline">Perfektioniere die Mittel. Bestimme den Zweck.</p>
-
-      <div class="dots" id="dots">
-        <button class="dot is-active" data-index="0" aria-label="Ansicht 1"></button>
-        <button class="dot" data-index="1" aria-label="Ansicht 2"></button>
-        <button class="dot" data-index="2" aria-label="Ansicht 3"></button>
+  <main id="start">
+    <section class="hero">
+      <div class="hero-portrait" aria-hidden="true">
+        <svg viewBox="0 0 600 800" class="portrait-svg" preserveAspectRatio="xMidYMax slice">
+          <defs><linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eceef1"/><stop offset="35%" stop-color="#eceef1" stop-opacity="0"/></linearGradient><radialGradient id="glow" cx="70%" cy="35%" r="60%"><stop offset="0%" stop-color="#3a4048"/><stop offset="100%" stop-color="#0f1013"/></radialGradient></defs>
+          <rect width="600" height="800" fill="url(#glow)"/><path d="M150 800 C150 560 230 430 300 430 C370 430 450 560 450 800 Z" fill="#1b1d21"/><ellipse cx="300" cy="290" rx="110" ry="135" fill="#3d4148"/><path d="M195 250 Q300 110 405 250 Q400 190 300 175 Q200 190 195 250 Z" fill="#101114"/><rect width="600" height="800" fill="url(#fade)"/>
+        </svg>
       </div>
-    </div>
+      <div class="hero-content">
+        <div class="slide-copy" aria-live="polite"><h1 class="headline" id="headline">ZUKUNFT, EFFIZIENT<span class="headline-dot">.</span></h1><svg class="signature" viewBox="0 0 420 120" aria-hidden="true"><path d="M10 70 C 40 20, 70 20, 90 55 C 105 80, 120 40, 140 45 C 160 50, 150 90, 175 85 C 200 80, 210 40, 235 45 C 260 50, 255 95, 280 90 L 410 60" fill="none" stroke="#2e6ff2" stroke-width="3" stroke-linecap="round"/></svg><p class="tagline" id="tagline">Perfektioniere die Mittel. Bestimme den Zweck.</p></div>
+        <div class="dots" id="dots" aria-label="Leitsätze"><button class="dot is-active" data-index="0" aria-label="Leitsatz Zukunft, effizient"></button><button class="dot" data-index="1" aria-label="Leitsatz Menschen, entscheidend"></button><button class="dot" data-index="2" aria-label="Leitsatz Ideen, wirksam"></button></div>
+      </div>
+      <div class="principles" aria-label="Drei Leitsätze"><article class="principle is-selected" data-principle="0"><span>01 / LEITSATZ</span><strong>ZUKUNFT,<br>EFFIZIENT.</strong></article><article class="principle" data-principle="1"><span>02 / LEITSATZ</span><strong>MENSCHEN,<br>ENTSCHEIDEND.</strong></article><article class="principle" data-principle="2"><span>03 / LEITSATZ</span><strong>IDEEN,<br>WIRKSAM.</strong></article></div>
+    </section>
+
+    <section class="info-section" id="forum"><div class="section-kicker">// INTERN / 01</div><h2>Mitarbeiter-Forum</h2><p>Ein gemeinsamer Raum für Austausch, Fragen und gute Zusammenarbeit. Teile Erfahrungen, unterstütze dein Team und bringe die Themen ein, die uns gemeinsam weiterbringen.</p><div class="forum-grid"><div><b>OFFENER AUSTAUSCH</b><span>Gedanken teilen. Lösungen gemeinsam entwickeln.</span></div><div><b>TEAM-IMPULS</b><span>Jede Perspektive macht HAAVK stärker.</span></div><div><b>NÄCHSTER SCHRITT</b><span>Dein Beitrag zählt – mach mit.</span></div></div></section>
+    <section class="info-section ideas-section" id="ideen"><div class="section-kicker">// INTERN / 02</div><h2>Ideen</h2><p>Die beste Idee beginnt mit einem Gedanken. Hier sammeln wir Vorschläge, die Abläufe verbessern, Menschen verbinden und unseren nächsten Schritt möglich machen.</p><div class="idea-card"><span class="idea-number">IDEA_001</span><h3>Einfacher zusammenarbeiten</h3><p>Ein digitales Ideenboard für kurze Vorschläge, schnelle Rückmeldungen und sichtbare Fortschritte im Team.</p><button type="button" class="idea-button">IDEe TEILEN <span>↗</span></button></div></section>
   </main>
 
-  <footer class="hud-bar">
-    <div class="hud-left">
-      <span class="hud-flag"></span>
-    </div>
-    <div class="timeline" id="timeline">
-      <span class="tick" data-year="18.93"></span>
-      <span class="tick" data-year="2003"></span>
-      <span class="tick" data-year="2020"></span>
-      <span class="tick" data-year="2027"></span>
-      <span class="tick" data-year="2035"></span>
-    </div>
-    <div class="hud-meta" id="hudMeta">// G.T.I 7 20 9 // DF 199.3 &lt;2035&gt;</div>
-    <div class="hud-tag">&gt; HAWK_OPS</div>
-  </footer>
-
+  <footer class="hud-bar"><div class="hud-left"><span class="hud-flag"></span></div><div class="timeline"><span class="tick" data-year="18.93"></span><span class="tick" data-year="2003"></span><span class="tick" data-year="2020"></span><span class="tick" data-year="2027"></span><span class="tick" data-year="2035"></span></div><div class="hud-meta">// G.T.I 7 20 9 // DF 199.3 &lt;2035&gt;</div><div class="hud-tag">&gt; HAWK_OPS</div></footer>
 <script src="script.js"></script>
 </body>
 </html>

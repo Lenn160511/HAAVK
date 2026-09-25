@@ -1,66 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  // --- Live-ish HUD UID stamp (mirrors the "WW UID:...._YYYYMMDDHHmm" style) ---
   const hudId = document.getElementById('hudId');
-  if (hudId) {
-    const now = new Date();
-    const pad = (n) => String(n).padStart(2, '0');
-    const stamp = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}`;
-    const uid = Math.floor(1e15 + Math.random() * 9e15);
-    hudId.textContent = `WW UID:${uid}_${stamp}`;
-  }
+  if (hudId) { const now = new Date(); const pad = n => String(n).padStart(2, '0'); const stamp = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}${pad(now.getHours())}${pad(now.getMinutes())}`; hudId.textContent = `WW UID:${Math.floor(1e15 + Math.random() * 9e15)}_${stamp}`; }
 
-  // --- Points counter animation (0 -> 40) ---
   const pointsValue = document.getElementById('pointsValue');
-  if (pointsValue) {
-    const target = 40;
-    const duration = 900;
-    const start = performance.now();
+  if (pointsValue) { const start = performance.now(); const tick = now => { const progress = Math.min((now - start) / 900, 1); pointsValue.textContent = Math.round((1 - Math.pow(1 - progress, 3)) * 40); if (progress < 1) requestAnimationFrame(tick); }; requestAnimationFrame(tick); }
 
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      pointsValue.textContent = Math.round(eased * target);
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  // --- Nav active state ---
-  const navLinks = document.querySelectorAll('[data-nav]');
-  navLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      navLinks.forEach((l) => l.classList.remove('is-active'));
-      link.classList.add('is-active');
-    });
-  });
-
-  // --- Hero dot carousel: swaps the tagline copy ---
-  const dots = document.querySelectorAll('.dot');
-  const tagline = document.getElementById('tagline');
-  const taglines = [
-    'Perfektioniere die Mittel. Bestimme den Zweck.',
-    'Effizienz ist keine Option. Sie ist der Standard.',
-    'Kein Zufall. Nur Berechnung.'
+  const slides = [
+    { title: 'ZUKUNFT, EFFIZIENT.', tagline: 'Perfektioniere die Mittel. Bestimme den Zweck.' },
+    { title: 'MENSCHEN, ENTSCHEIDEND.', tagline: 'Vertraue dem Team. Stärke den gemeinsamen Weg.' },
+    { title: 'IDEEN, WIRKSAM.', tagline: 'Denke weiter. Mache aus Impulsen Fortschritt.' }
   ];
+  const headline = document.getElementById('headline');
+  const tagline = document.getElementById('tagline');
+  const dots = document.querySelectorAll('.dot');
+  const principles = document.querySelectorAll('.principle');
+  const selectSlide = index => { const slide = slides[index] || slides[0]; dots.forEach(dot => dot.classList.toggle('is-active', Number(dot.dataset.index) === index)); principles.forEach(card => card.classList.toggle('is-selected', Number(card.dataset.principle) === index)); if (headline) headline.innerHTML = `${slide.title.replace('.', '<span class="headline-dot">.</span>')}`; if (tagline) { tagline.classList.add('is-changing'); setTimeout(() => { tagline.textContent = slide.tagline; tagline.classList.remove('is-changing'); }, 150); } };
+  dots.forEach(dot => dot.addEventListener('click', () => selectSlide(Number(dot.dataset.index))));
+  principles.forEach(card => card.addEventListener('click', () => selectSlide(Number(card.dataset.principle))));
 
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      dots.forEach((d) => d.classList.remove('is-active'));
-      dot.classList.add('is-active');
-      const index = Number(dot.dataset.index) || 0;
-      if (tagline) {
-        tagline.style.opacity = 0;
-        setTimeout(() => {
-          tagline.textContent = taglines[index] || taglines[0];
-          tagline.style.opacity = 1;
-        }, 150);
-      }
-    });
-  });
-
-  if (tagline) {
-    tagline.style.transition = 'opacity 0.15s ease';
-  }
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const updateNav = () => { const current = window.location.hash.slice(1) || 'start'; navLinks.forEach(link => link.classList.toggle('is-active', link.dataset.nav === current)); };
+  navLinks.forEach(link => link.addEventListener('click', () => setTimeout(updateNav, 0))); window.addEventListener('hashchange', updateNav); updateNav();
 });
