@@ -1,54 +1,250 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAAVK — The Future Perfected.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAAVK — The Future Perfected.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- HUD ID Display -->
   <div class="hud-id" id="hudId">HAAVK SYS:8179257665_202609251412</div>
-  <div class="corner corner-tl" aria-hidden="true"><span></span><span></span><span></span><small>[HAAVK CORE]</small></div>
-  <div class="corner corner-tr" aria-hidden="true"><div class="corner-square"></div></div>
-  <div class="ruler" aria-hidden="true"><span>45</span><span>1</span><span>8</span><span>1</span></div>
 
+  <!-- Corner Decorations -->
+  <div class="corner corner-tl" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <small>[HAAVK CORE]</small>
+  </div>
+  <div class="corner corner-tr" aria-hidden="true">
+    <div class="corner-square"></div>
+  </div>
+  <div class="ruler" aria-hidden="true">
+    <span>45</span>
+    <span>1</span>
+    <span>8</span>
+    <span>1</span>
+  </div>
+
+  <!-- Main Header -->
   <header class="site-header">
     <a class="logo" href="#start" aria-label="HAAVK Startseite">
-      <svg viewBox="0 0 40 40" class="logo-mark" aria-hidden="true"><path d="M20 2 L34 20 L20 38 L6 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 10 L28 20 L20 30 L12 20 Z" fill="currentColor"/></svg>
+      <svg viewBox="0 0 40 40" class="logo-mark" aria-hidden="true">
+        <path d="M20 2 L34 20 L20 38 L6 20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M20 10 L28 20 L20 30 L12 20 Z" fill="currentColor"/>
+      </svg>
       <span class="logo-text">HAAVK</span>
     </a>
+
     <nav class="main-nav" aria-label="Hauptnavigation">
       <a href="#start" class="nav-link is-active" data-nav="start">ÜBER UNS</a>
       <a href="#forum" class="nav-link" data-nav="forum">STIMMEN DES SYSTEMS</a>
       <a href="#ideen" class="nav-link" data-nav="ideen">PROGRAMME</a>
     </nav>
-    <div class="points"><span class="points-label">Global Division</span><span class="points-divider"></span><span class="points-value" id="pointsValue">Human Resources</span></div>
+
+    <div class="points">
+      <span class="points-label">Global Division</span>
+      <span class="points-divider"></span>
+      <span class="points-value" id="pointsValue">Human Resources</span>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main id="start">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-portrait" aria-hidden="true">
         <svg viewBox="0 0 600 800" class="portrait-svg" preserveAspectRatio="xMidYMax slice">
-          <defs><linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#eceef1"/><stop offset="35%" stop-color="#eceef1" stop-opacity="0"/></linearGradient><radialGradient id="glow" cx="40%" cy="30%"><stop offset="0%" stop-color="#2e6ff2" stop-opacity="0.15"/><stop offset="100%" stop-color="#2e6ff2" stop-opacity="0"/></radialGradient></defs>
-          <rect width="600" height="800" fill="url(#glow)"/><path d="M150 800 C150 560 230 430 300 430 C370 430 450 560 450 800 Z" fill="#1b1d21"/><ellipse cx="300" cy="290" rx="110" ry="135" fill="#2a2d33" opacity="0.6"/><circle cx="300" cy="280" r="95" fill="none" stroke="#2e6ff2" stroke-width="2" opacity="0.4"/><circle cx="300" cy="280" r="105" fill="none" stroke="#2e6ff2" stroke-width="1" opacity="0.2"/><rect x="240" y="260" width="120" height="8" fill="#2e6ff2" opacity="0.3"/><path d="M250 300 L350 300" stroke="#2e6ff2" stroke-width="1.5" opacity="0.2"/><rect x="180" y="420" width="240" height="3" fill="#2e6ff2" opacity="0.15"/><rect x="180" y="450" width="200" height="2" fill="#2e6ff2" opacity="0.1"/><rect x="180" y="480" width="220" height="2" fill="#2e6ff2" opacity="0.1"/><path d="M100 650 L500 650" stroke="#2e6ff2" stroke-width="1" opacity="0.08" stroke-dasharray="10,5"/><rect x="0" y="0" width="600" height="800" fill="url(#fade)"/>
+          <defs>
+            <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#eceef1"/>
+              <stop offset="35%" stop-color="#eceef1" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="40%" cy="30%">
+              <stop offset="0%" stop-color="#2e6ff2" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#2e6ff2" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#2e6ff2" stop-opacity="0.3"/>
+              <stop offset="50%" stop-color="#2e6ff2" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="#2e6ff2" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          
+          <!-- Background Gradient -->
+          <rect width="600" height="800" fill="url(#glow)"/>
+          
+          <!-- Wave Pattern -->
+          <path d="M0 200 Q150 150 300 200 T600 200 L600 800 L0 800 Z" fill="url(#wave-gradient)"/>
+          <path d="M0 350 Q150 300 300 350 T600 350 L600 800 L0 800 Z" fill="url(#wave-gradient)" opacity="0.7"/>
+          <path d="M0 500 Q150 450 300 500 T600 500 L600 800 L0 800 Z" fill="url(#wave-gradient)" opacity="0.5"/>
+          
+          <!-- Accent Lines -->
+          <line x1="100" y1="100" x2="500" y2="150" stroke="#2e6ff2" stroke-width="2" opacity="0.2"/>
+          <line x1="80" y1="300" x2="520" y2="320" stroke="#2e6ff2" stroke-width="1.5" opacity="0.15"/>
+          <line x1="120" y1="550" x2="480" y2="580" stroke="#2e6ff2" stroke-width="1" opacity="0.1"/>
+          
+          <!-- Geometric Circles -->
+          <circle cx="150" cy="250" r="60" fill="none" stroke="#2e6ff2" stroke-width="1.5" opacity="0.2"/>
+          <circle cx="150" cy="250" r="90" fill="none" stroke="#2e6ff2" stroke-width="1" opacity="0.1"/>
+          
+          <circle cx="450" cy="400" r="80" fill="none" stroke="#2e6ff2" stroke-width="1.5" opacity="0.2"/>
+          <circle cx="450" cy="400" r="110" fill="none" stroke="#2e6ff2" stroke-width="1" opacity="0.1"/>
+          
+          <!-- Grid Pattern -->
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2e6ff2" stroke-width="0.5" opacity="0.08"/>
+            </pattern>
+          </defs>
+          <rect width="600" height="800" fill="url(#grid)"/>
+          
+          <!-- Fade Overlay -->
+          <rect width="600" height="800" fill="url(#fade)"/>
         </svg>
       </div>
+
       <div class="hero-content">
-        <div class="slide-copy" aria-live="polite"><h1 class="headline" id="headline">ZUKUNFT, EFFIZIENT<span class="headline-dot">.</span></h1><svg class="signature" viewBox="0 0 420 120" aria-hidden="true"><path d="M10 85 Q20 45 40 50 Q55 52 60 75 Q62 90 45 92 Q30 93 25 80 Q22 70 35 65 Q50 58 70 75 Q85 88 105 70 Q120 55 128 45 Q140 32 150 50 Q160 65 145 90 Q135 100 120 95 Q105 88 110 75 Q115 65 130 70 Q150 78 165 55 Q180 38 195 48 Q210 58 200 95 Q195 110 175 105" fill="none" stroke="#2e6ff2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="130" y="115" fill="#2e6ff2" font-size="32" font-weight="500" font-family="Inter, sans-serif">L. Schmuck</text></svg><span id="tagline" class="tagline">Perfektioniere die Mittel. Bestimme den Zweck.</span></div>
-        <div class="dots" id="dots" aria-label="Leitsätze"><button class="dot is-active" data-index="0" aria-label="Leitsatz Zukunft, effizient"></button><button class="dot" data-index="1" aria-label="Leitsatz Biotechnologie"></button><button class="dot" data-index="2" aria-label="Leitsatz KI-Entwicklung"></button></div>
+        <!-- Slide Content -->
+        <div class="slide-copy" aria-live="polite">
+          <h1 class="headline" id="headline">
+            ZUKUNFT, EFFIZIENT<span class="headline-dot">.</span>
+          </h1>
+          <svg class="signature" viewBox="0 0 420 120" aria-hidden="true">
+            <path d="M10 85 Q20 45 40 50 Q55 52 60 75 Q62 90 45 92 Q30 93 25 80 Q22 70 35 65 Q50 58 70 75 Q85 88 105 70 Q120 55 128 45 Q140 32 150 50 Q160 65 145 90 Q135 100 120 95 Q105 88 110 75 Q115 65 130 70 Q150 78 165 55 Q180 38 195 48 Q210 58 200 95 Q195 110 175 105" fill="none" stroke="#2e6ff2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="130" y="115" fill="#2e6ff2" font-size="32" font-weight="500" font-family="Inter, sans-serif">L. Schmuck</text>
+          </svg>
+          <span id="tagline" class="tagline">
+            Perfektioniere die Mittel. Bestimme den Zweck.
+          </span>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="dots" id="dots" aria-label="Leitsätze">
+          <button class="dot is-active" data-index="0" aria-label="Leitsatz Zukunft, effizient"></button>
+          <button class="dot" data-index="1" aria-label="Leitsatz Menschen, entscheidend"></button>
+          <button class="dot" data-index="2" aria-label="Leitsatz Ideen, wirksam"></button>
+        </div>
       </div>
-      <div class="principles" aria-label="Bereiche"><article class="principle is-selected" data-principle="0"><span>01 / BEREICH</span><strong>BIOTECHNOLOGIE</strong></article><article class="principle" data-principle="1"><span>02 / BEREICH</span><strong>KI-ENTWICKLUNG</strong></article><article class="principle" data-principle="2"><span>03 / BEREICH</span><strong>INFRASTRUKTUR</strong></article></div>
+
+      <!-- Principles Grid -->
+      <div class="principles" aria-label="Bereiche">
+        <article class="principle is-selected" data-principle="0">
+          <span>01 / BEREICH</span>
+          <strong>BIOTECHNOLOGIE</strong>
+        </article>
+        <article class="principle" data-principle="1">
+          <span>02 / BEREICH</span>
+          <strong>KI-ENTWICKLUNG</strong>
+        </article>
+        <article class="principle" data-principle="2">
+          <span>03 / BEREICH</span>
+          <strong>INFRASTRUKTUR</strong>
+        </article>
+      </div>
     </section>
 
-    <section class="info-section" id="forum"><div class="section-kicker">// INTERN / 01</div><h2>Stimmen des Systems</h2><p>Jeder Mitarbeiter ist eine Stimme im HAAVK-Netzwerk. Ihre Rolle definiert die Zukunft. Vier Positionen. Ein Ziel.</p><div class="forum-grid"><div><b>MONOLITH</b><span>Ingenieurwesen. Der Konstrukteur der Infrastruktur.</span></div><div><b>NACHTEL</b><span>Informationsabteilung. Der Hüter der Daten.</span></div><div><b>DONNER</b><span>Sicherheit. Der Wächter des Systems.</span></div><div><b>RIESTER</b><span>Basis-Unterstützung. Das Fundament aller Operationen.</span></div></div></section>
+    <!-- Forum Section -->
+    <section class="info-section" id="forum">
+      <div class="section-kicker">// INTERN / 01</div>
+      <h2>Stimmen des Systems</h2>
+      <p>
+        Jeder Mitarbeiter ist eine Stimme im HAAVK-Netzwerk. Ihre Rolle definiert die Zukunft. 
+        Vier Positionen. Ein Ziel.
+      </p>
 
-    <section class="info-section ideas-section" id="ideen"><div class="section-kicker">// INTERN / 02</div><h2>Programme</h2><p>Die vier Säulen der HAAVK-Zukunft. Technologie, die die Menschheit transformiert.</p><div class="idea-card"><span class="idea-number">HAAVK-CORE</span><h3>Zentrale KI-Instanz</h3><p>Das Gehirn aller Operationen. Künstliche Intelligenz, die lernt, optimiert und entscheidet.</p><button type="button" class="idea-button">MEHR ERFAHREN <span>↗</span></button></div><div class="idea-card"><span class="idea-number">HAAVK-PULSE</span><h3>Gesundheitsoptimierung</h3><p>Biotechnologische Systeme für menschliche Perfektion. Überwachung, Anpassung, Evolution.</p><button type="button" class="idea-button">MEHR ERFAHREN <span>↗</span></button></div><div class="idea-card"><span class="idea-number">HAAVK-SHIELD</span><h3>Sicherheitsnetzwerke</h3><p>Globale Schutzarchitektur. Kontrolle. Überwachung. Sicherheit auf allen Ebenen.</p><button type="button" class="idea-button">MEHR ERFAHREN <span>↗</span></button></div><div class="idea-card"><span class="idea-number">HAAVK-ECHO</span><h3>Informationsverarbeitung</h3><p>Datenfluss in Echtzeit. Alle Informationen, alle Kanäle, immer verfügbar.</p><button type="button" class="idea-button">MEHR ERFAHREN <span>↗</span></button></div></section>
+      <div class="forum-grid">
+        <div>
+          <b>MONOLITH</b>
+          <span>Ingenieurwesen. Der Konstrukteur der Infrastruktur.</span>
+        </div>
+        <div>
+          <b>NACHTEL</b>
+          <span>Informationsabteilung. Der Hüter der Daten.</span>
+        </div>
+        <div>
+          <b>DONNER</b>
+          <span>Sicherheit. Der Wächter des Systems.</span>
+        </div>
+        <div>
+          <b>RIESTER</b>
+          <span>Basis-Unterstützung. Das Fundament aller Operationen.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ideas/Programs Section -->
+    <section class="info-section ideas-section" id="ideen">
+      <div class="section-kicker">// INTERN / 02</div>
+      <h2>Programme</h2>
+      <p>
+        Die vier Säulen der HAAVK-Zukunft. Technologie, die die Menschheit transformiert.
+      </p>
+
+      <!-- HAAVK-CORE -->
+      <div class="idea-card">
+        <span class="idea-number">HAAVK-CORE</span>
+        <h3>Zentrale KI-Instanz</h3>
+        <p>
+          Das Gehirn aller Operationen. Künstliche Intelligenz, die lernt, optimiert und entscheidet.
+        </p>
+        <button type="button" class="idea-button">MEHR ERFAHREN <span>→</span></button>
+      </div>
+
+      <!-- HAAVK-PULSE -->
+      <div class="idea-card">
+        <span class="idea-number">HAAVK-PULSE</span>
+        <h3>Gesundheitsoptimierung</h3>
+        <p>
+          Biotechnologische Systeme für menschliche Perfektion. Überwachung, Anpassung, Evolution.
+        </p>
+        <button type="button" class="idea-button">MEHR ERFAHREN <span>→</span></button>
+      </div>
+
+      <!-- HAAVK-SHIELD -->
+      <div class="idea-card">
+        <span class="idea-number">HAAVK-SHIELD</span>
+        <h3>Sicherheitsnetzwerke</h3>
+        <p>
+          Globale Schutzarchitektur. Kontrolle. Überwachung. Sicherheit auf allen Ebenen.
+        </p>
+        <button type="button" class="idea-button">MEHR ERFAHREN <span>→</span></button>
+      </div>
+
+      <!-- HAAVK-ECHO -->
+      <div class="idea-card">
+        <span class="idea-number">HAAVK-ECHO</span>
+        <h3>Informationsverarbeitung</h3>
+        <p>
+          Datenfluss in Echtzeit. Alle Informationen, alle Kanäle, immer verfügbar.
+        </p>
+        <button type="button" class="idea-button">MEHR ERFAHREN <span>→</span></button>
+      </div>
+    </section>
   </main>
 
-  <footer class="hud-bar"><div class="hud-left"><span class="hud-flag"></span></div><div class="timeline"><span class="tick" data-year="2027"></span><span class="tick" data-year="2035"></span><span class="tick" data-year="2050"></span><span class="tick" data-year="2075"></span><span class="tick" data-year="2100"></span></div><div class="hud-meta">// GLOBAL OPERATIONS / DIVISION HUMAN RESOURCES</div><div class="hud-tag">&gt; HAAVK_ACTIVE</div></footer>
-<script src="script.js"></script>
+  <!-- Footer HUD Bar -->
+  <footer class="hud-bar">
+    <div class="hud-left">
+      <span class="hud-flag"></span>
+    </div>
+
+    <div class="timeline">
+      <span class="tick" data-year="2027"></span>
+      <span class="tick" data-year="2035"></span>
+      <span class="tick" data-year="2050"></span>
+      <span class="tick" data-year="2075"></span>
+      <span class="tick" data-year="2100"></span>
+    </div>
+
+    <div class="hud-meta">// GLOBAL OPERATIONS / DIVISION HUMAN RESOURCES</div>
+    <div class="hud-tag">&gt; HAAVK_ACTIVE</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
