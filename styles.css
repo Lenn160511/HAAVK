@@ -616,4 +616,34 @@ header.site-header {
     border-radius: 0;
   }
 }
+.hero-portrait {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #dfe2e8; /* leichtes Grau wie im Screenshot */
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: grayscale(12%);
+}
+
+/* Fade links, wie im Screenshot */
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to right, #f4f5f7 0%, transparent 100%);
+  pointer-events: none;
+}
 
