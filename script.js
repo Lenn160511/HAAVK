@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setTimeout(() => {
       signature.innerHTML = `
-        <path d="${slide.signature.path}" fill="none" stroke="#2e6ff2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="20" y="115" fill="#2e6ff2" font-size="36" font-weight="500" font-family="Inter, sans-serif">${slide.signature.name}</text>`;
+  <path d="${slide.signature.path}" fill="none" stroke="#2e6ff2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="20" y="115" fill="#000000" font-size="36" font-weight="500" font-family="Inter, sans-serif">${slide.signature.name}</text>`;
+
       signature.classList.remove('is-swiping');
     }, 200);
   };
