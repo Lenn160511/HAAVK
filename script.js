@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tagline: 'Perfektioniere die Mittel. Bestimme den Zweck.',
       signature: {
         name: 'L. Schmuck',
-        path: 'M18 72 C28 42 42 27 55 40 C68 53 43 89 31 72 C21 59 43 36 63 55 C82 74 91 84 105 65 C116 50 119 32 128 40 C139 50 119 83 137 82 C153 81 160 45 174 47 C190 50 180 85 199 80 C217 75 2[...]'
+      path: "M12 78 C28 42 46 28 62 44 C78 60 52 96 36 78 C22 60 48 34 70 56 C92 78 104 88 118 66 C130 48 134 30 144 40 C156 52 134 90 154 88 C170 86 178 48 192 50 C208 54 198 90 218 84 C236 78 248 40 260 46"
+
+
       }
     },
     {
