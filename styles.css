@@ -402,7 +402,7 @@ header {
 
 .info-section {
   padding: 120px 24px;
-  background: var(--bg);
+  background: #232323;
   position: relative;
   z-index: 5;
 }
